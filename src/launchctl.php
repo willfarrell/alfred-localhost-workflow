@@ -44,17 +44,17 @@ $services = json_decode(file_get_contents("services.json"));
 $service = $services->$id;
 
 // start
-$command = "sudo launchctl start $service->label";
-$w->result( "$id-start", $command, "Start $service->name", "Will run `$command` for you", "icon-cache/$id.png" );
+$command = "sudo launchctl start {$service->label}";
+$w->result( "$id-start", $command, "Start {$service->name}", "Will run `$command` for you", "icon-cache/{$service->id}.png" );
 
 // stop
-$command = "sudo launchctl stop $service->label";
-$w->result( "$id-stop", $command, "Stop $service->name", "Will run `$command` for you", "icon-cache/$id.png" );
+$command = "sudo launchctl stop {$service->label}";
+$w->result( "{$service->id}-stop", $command, "Stop {$service->name}", "Will run `$command` for you", "icon-cache/{$service->id}.png" );
 
 // restart
-$command = "sudo launchctl stop $service->label"
-		."; sudo launchctl start $service->label";
-$w->result( "$id-restart", $command, "Restart $service->name", "Will run `$command` for you", "icon-cache/$id.png" );
+$command = "sudo launchctl stop {$service->label}"
+		."; sudo launchctl start {$service->label}";
+$w->result( "{$service->id}-restart", $command, "Restart {$service->name}", "Will run `$command` for you", "icon-cache/{$service->id}.png" );
 
 // status
 status($service->id, $service->name, $service->label);
