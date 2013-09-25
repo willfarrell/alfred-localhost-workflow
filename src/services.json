@@ -1,0 +1,33 @@
+{
+	"apache": {
+		"id":"apache",
+		"name":"Apache",
+		"label":"org.apache.httpd"
+	},
+	"nginx": {
+		
+	},
+	
+	
+	"memcache": {
+		"id":"memcache",
+		"name":"memcache",
+		"label":"org.memcache.memcached"
+	},
+	"redis": {
+		"id":"redis",
+		"name":"redis",
+		"label":"org.redis.redis-server"
+	},
+	
+	"mysql": {
+		"id":"mysql",
+		"name":"MySQL",
+		"label":"org.mysql.mysqld"
+	},
+	"postgresql": {
+		"id":"postgresql",
+		"name":"PostgreSQL",
+		"label":"org.postgresql.postgres_alt"
+	}
+}
