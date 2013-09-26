@@ -29,5 +29,15 @@
 		"id":"postgresql",
 		"name":"PostgreSQL",
 		"label":"org.postgresql.postgres_alt"
+	},
+	"mongodb": {
+		"id": "mongodb",
+		"name": "mongoDB",
+		"label":"org.mongo.mongod"
+	},
+	"couchdb": {
+		"id": "couchdb",
+		"name": "CouchDB",
+		"label": "org.apache.couchdb"
 	}
 }
